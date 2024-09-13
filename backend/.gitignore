@@ -1,0 +1,10 @@
+# Ignore application binary and logs
+unified-atlassian-platform
+*.log
+
+# Ignore configuration files with sensitive data
+config.yaml
+config.json
+
+# Ignore dependencies directory (if you use local dependencies)
+vendor/
