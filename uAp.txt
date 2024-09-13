@@ -1,0 +1,94 @@
+/unified-atlassian-platform
+│
+├── /backend
+│   ├── /api
+│   │   ├── /jira
+│   │   │   ├── jiraController.go
+│   │   │   ├── jiraService.go
+│   │   │   ├── jiraModel.go
+│   │   ├── /confluence
+│   │   │   ├── confluenceController.go
+│   │   │   ├── confluenceService.go
+│   │   │   ├── confluenceModel.go
+│   │   ├── /bitbucket
+│   │   │   ├── bitbucketController.go
+│   │   │   ├── bitbucketService.go
+│   │   │   ├── bitbucketModel.go
+│   │   ├── /auth
+│   │   │   ├── authController.go
+│   │   │   ├── authService.go
+│   │   │   ├── jwt.go
+│   │   ├── /automation
+│   │   │   ├── workflowController.go
+│   │   │   ├── workflowService.go
+│   │   ├── main.go
+│   ├── /db
+│   │   ├── database.go
+│   │   ├── migrations.sql
+│   ├── /middleware
+│   │   ├── authMiddleware.go
+│   │   ├── errorHandler.go
+│   ├── /config
+│   │   ├── config.go
+│   │   ├── config.yaml
+│   ├── /utils
+│   │   ├── logger.go
+│   │   ├── httpClient.go
+│   ├── Dockerfile
+│   ├── go.mod
+│   ├── go.sum
+│   ├── README.md
+│
+├── /frontend
+│   ├── /public
+│   │   ├── index.html
+│   ├── /src
+│   │   ├── /components
+│   │   │   ├── Dashboard.js
+│   │   │   ├── JiraTaskBoard.js
+│   │   │   ├── ConfluenceDocs.js
+│   │   │   ├── BitbucketRepoView.js
+│   │   │   ├── WorkflowAutomation.js
+│   │   ├── /pages
+│   │   │   ├── Home.js
+│   │   │   ├── Login.js
+│   │   │   ├── Settings.js
+│   │   ├── /services
+│   │   │   ├── jiraService.js
+│   │   │   ├── confluenceService.js
+│   │   │   ├── bitbucketService.js
+│   │   │   ├── authService.js
+│   │   ├── /utils
+│   │   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── App.css
+│   ├── package.json
+│   ├── webpack.config.js
+│
+├── /scripts
+│   ├── initDb.sh
+│   ├── deploy.sh
+│   ├── start.sh
+│
+├── /docs
+│   ├── api_documentation.md
+│   ├── architecture_diagram.png
+│   ├── deployment_guide.md
+│   ├── contributing.md
+│
+├── /tests
+│   ├── /backend
+│   │   ├── jiraController_test.go
+│   │   ├── confluenceController_test.go
+│   │   ├── bitbucketController_test.go
+│   ├── /frontend
+│   │   ├── Dashboard.test.js
+│   │   ├── JiraTaskBoard.test.js
+│   ├── /integration
+│   │   ├── api_integration_test.go
+│
+├── .env
+├── .gitignore
+├── LICENSE
+└── README.md
