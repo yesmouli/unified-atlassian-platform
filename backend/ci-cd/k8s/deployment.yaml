@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: unified-atlassian-platform-deployment
+  labels:
+    app: unified-atlassian-platform
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: unified-atlassian-platform
+  template:
+    metadata:
+      labels:
+        app: unified-atlassian-platform
+    spec:
+      containers:
+        - name: api
+          image: unified-atlassian-platform:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_HOST
+              value: "mysql-db"
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASSWORD
+              value: "password"
+            - name: DB_NAME
+              value: "unified_atlassian_platform"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: unified-atlassian-platform-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: unified-atlassian-platform
