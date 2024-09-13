@@ -1,0 +1,3 @@
+./scripts/initDb.sh
+./scripts/deploy.sh
+./scripts/start.sh
