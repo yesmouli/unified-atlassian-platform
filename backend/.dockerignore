@@ -1,0 +1,8 @@
+# Exclude unnecessary files from the Docker image
+Dockerfile
+docker-compose.yaml
+.git
+.gitignore
+node_modules
+config/config.yaml
+app.log
